@@ -36,6 +36,13 @@
         networkInterface = "enp5s0";
       };
     };
+    homeConfigurations.matty = mkHomeConfiguration {
+      extraSpecialArgs = {
+        withGUI = false;
+        isDesktop = false;
+        networkInterface = "eth0";
+      };
+    };
 
     homeConfigurations.server = mkHomeConfiguration {
       extraSpecialArgs = {
@@ -74,7 +81,7 @@
       };
     };
 
-    inherit home-manager;
-    inherit (home-manager) packages;
+    # inherit home-manager;
+    # inherit (home-manager) packages;
   };
 }

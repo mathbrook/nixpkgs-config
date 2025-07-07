@@ -18,9 +18,9 @@ in
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
   home.packages = packages pkgs withGUI;
-  home.homeDirectory = "/home/jon";
-  home.username = "jon";
-  home.stateVersion = "21.11";
+  home.homeDirectory = "/home/matty";
+  home.username = "matty";
+  home.stateVersion = "25.05";
 
   home.file.".config/nvim/coc-settings.json".source = ./coc-settings.json;
 
@@ -126,13 +126,14 @@ in
   programs.git = {
     enable = true;
     lfs.enable = true;
-    userName = "Jonathan Ringer";
-    userEmail = "jonringer117@gmail.com";
+    userName = "mathbrook";
+    userEmail = "mathos.brook@gmail.com";
     difftastic.enable = true;
-    signing = {
-      key = "5C841D3CFDFEC4E0";
-      signByDefault = false;
-    };
+    # TODO: get my own signing key??
+    # signing = {
+    #   key = "5C841D3CFDFEC4E0";
+    #   signByDefault = false;
+    # };
     aliases = {
       a = "add";
       c = "commit";
@@ -179,9 +180,9 @@ in
         condition = "gitdir:~/work/";
         contents = {
           user = {
-            name = "Jonathan Ringer";
-            email = "jringer@anduril.com";
-            signingKey = "7B8CFA0F33328D9A";
+            name = "mathbrook";
+            email = "mathos.brook@gmail.com";
+            # signingKey = "7B8CFA0F33328D9A";
           };
         };
       }

@@ -1,5 +1,6 @@
 pkgs: withGUI: with pkgs; [
   # these files are meant to be installed in all scenarios
+  asciinema # To record terminal shenanigans
   bat
   binutils
   bottom
