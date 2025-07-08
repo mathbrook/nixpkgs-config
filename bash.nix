@@ -95,7 +95,7 @@ pkgs: {
     cd() { builtin cd "$@" && ls . ; }
     # Change dir with Fuzzy finding
     cf() {
-      dir=$(fd . ''${1:-/home/jon/} --type d 2>/dev/null | fzf)
+      dir=$(fd . ''${1:-/home/matty/} --type d 2>/dev/null | fzf)
       cd "$dir"
     }
     # Change dir in Nix store
@@ -126,6 +126,9 @@ pkgs: {
       nix build -f . --keep-going $@
     }
 
+    hm-build() {
+      home-manager switch --flake .#matty
+    }
     battail() {
       tail -f $@ | bat --paging=never -l log
     }

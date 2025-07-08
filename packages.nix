@@ -30,6 +30,7 @@ pkgs: withGUI: with pkgs; [
   nix-template
   nix-tree
   nix-update
+  nixfmt-rfc-style
   nixpkgs-fmt
   nixpkgs-review
   nodejs # needed for coc vim plugins
@@ -42,6 +43,7 @@ pkgs: withGUI: with pkgs; [
 
   tig
   tree
+  treefmt
   watson
   wget
 
