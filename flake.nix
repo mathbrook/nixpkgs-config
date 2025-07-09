@@ -80,8 +80,5 @@
         networkInterface = "en1";
       };
     };
-
-    # inherit home-manager;
-    # inherit (home-manager) packages;
   };
 }

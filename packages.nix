@@ -22,7 +22,7 @@ pkgs: withGUI: with pkgs; [
   gnumake
   hicolor-icon-theme # lutris
   htop
-
+  just
   llvm
 
   manix
