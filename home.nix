@@ -67,49 +67,12 @@ in
   programs.jq.enable = true;
   programs.ssh = {
     enable = true;
-    forwardAgent = true;
+    # forwardAgent = true;
+    # addKeysToAgent = true;
     extraConfig = ''
-      Include ~/.ssh/config.d/*
-
-      Host mac
-        HostName 10.0.0.236
-        Port 22
-        IdentityFile /home/jon/.ssh/id_rsa
-        ForwardAgent yes
-        User jon
-        ServerAliveInterval 60
-        RemoteForward /run/user/1000/gnupg/S.gpg-agent /run/user/1000/gnupg/S.gpg-agent.extra
-
-      Host build
-        HostName 10.0.0.21
-        Port 22
-        IdentityFile /home/jon/.ssh/id_rsa
-        User root
-
-      Host external
-        HostName jonringer.us
-        Port 2222
-        IdentityFile /home/jon/.ssh/id_rsa
-        ForwardAgent yes
-        User jon
-        RemoteForward /run/user/1000/gnupg/S.gpg-agent /run/user/1000/gnupg/S.gpg-agent.extra
-
-      Host server
-        HostName 10.0.0.21
-        Port 22
-        IdentityFile /home/jon/.ssh/id_rsa
-        User jon
-
-      Host pi
-        HostName 10.0.0.220
-        Port 22
-        IdentityFile /home/jon/.ssh/id_rsa
-        User jon
-        RemoteForward /run/user/1000/gnupg/S.gpg-agent /run/user/1000/gnupg/S.gpg-agent.extra
-
-      Host *
-        ForwardAgent yes
-        AddKeysToAgent yes
+    Host *
+      ForwardAgent yes
+      AddKeysToAgent yes
       '';
   };
   programs.fzf.enable = true;
